@@ -1,4 +1,4 @@
-function browserDetection () {
+(function browserDetection () {
     var userAgent = navigator.userAgent.toString().toLowerCase();
     if (userAgent.indexOf('windows') !== -1) //windows OS
         $('body').addClass('windows');
@@ -31,4 +31,4 @@ function browserDetection () {
         $('body').addClass('chrome');
     else //ie11
         $('body').addClass('ie11');
-}
+})();
