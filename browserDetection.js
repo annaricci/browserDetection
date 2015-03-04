@@ -18,7 +18,9 @@
         $('body').addClass('ie');
         if (userAgent.indexOf('msie 8') !== -1) //IE8
             $('body').addClass('ie8');
-    }
+    } 
+    else if (!(window.ActiveXObject) && "ActiveXObject" in window) //IE11
+        $('body').addClass('ie11');
     else if (userAgent.indexOf('firefox') !== -1) //Firefox
         $('body').addClass('firefox');
     else if (userAgent.indexOf('opera') !== -1) //Opera
@@ -29,6 +31,4 @@
         $('body').addClass('chromium');
     else if ((userAgent.indexOf('safari') != -1) && (userAgent.indexOf('chrome') != -1)) //chrome
         $('body').addClass('chrome');
-    else //ie11
-        $('body').addClass('ie11');
 })();
